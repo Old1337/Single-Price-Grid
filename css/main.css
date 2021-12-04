@@ -1,0 +1,171 @@
+/* Start Global Rules */
+:root {
+  --cyan-color: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Karla", sans-serif;
+  min-height: 100vh;
+  font-size: 16px;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1440px;
+  }
+}
+/* End Global Rules */
+
+@media (min-width: 1100px) {
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+  }
+}
+main {
+  padding: 50px;
+}
+.big {
+  background-color: white;
+  padding: 35px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 10px 10px 0px 0px;
+}
+
+h1 {
+  color: var(--cyan-color);
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.big > p {
+  color: var(--bright-yellow);
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.big p:last-child {
+  color: var(--grayish-blue);
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .big p:last-child {
+    font-size: 15px;
+  }
+}
+
+.left {
+  background-color: var(--cyan-color);
+  border-radius: 0px 0px 0px 10px;
+  padding: 35px;
+}
+@media (max-width: 767px) {
+  .left {
+    border-radius: 0px 0px 0px 0px;
+  }
+}
+h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 30px;
+  color: white;
+  position: relative;
+  margin-bottom: 10px;
+}
+h3::before {
+  content: "per month";
+  position: absolute;
+  right: 140px;
+  top: 8px;
+  font-size: 15px;
+  color: #ffffff61;
+}
+@media (max-width: 767px) {
+  h3::before {
+    right: 115px;
+  }
+}
+
+.left p {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+input {
+  border: none;
+  background-color: var(--bright-yellow);
+  color: white;
+  padding: 15px 100px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.right {
+  background-color: hsl(179deg 62% 43% / 75%);
+  border-radius: 0px 0px 10px 0px;
+  padding: 35px;
+}
+@media (max-width: 767px) {
+  .right {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+
+h4 {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.right p {
+  font-size: 15px;
+  color: #ffffffb8;
+  line-height: 1.5;
+  max-width: 185px;
+}
